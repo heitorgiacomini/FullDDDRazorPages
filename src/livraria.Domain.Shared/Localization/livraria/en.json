@@ -4,7 +4,7 @@
     "Menu:Home": "Home",
     "Welcome": "Welcome",
     "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
-    "Menu:BookStore": "Book Store",
+    "Menu:livraria": "Book Store",
     "Menu:Books": "Books",
     "Actions": "Actions",
     "Close": "Close",
@@ -29,7 +29,7 @@
     "Enum:BookType:8": "Poetry",
     "BookDeletionConfirmationMessage": "Are you sure to delete the book '{0}'?",
     "SuccessfullyDeleted": "Successfully deleted!",
-    "Permission:BookStore": "Book Store",
+    "Permission:livraria": "Book Store",
     "Permission:Books": "Book Management",
     "Permission:Books.Create": "Creating new books",
     "Permission:Books.Edit": "Editing the books",
@@ -38,7 +38,12 @@
     "Permission:Authors": "Author Management",
     "Permission:Authors.Create": "Creating new authors",
     "Permission:Authors.Edit": "Editing the authors",
-    "Permission:Authors.Delete": "Deleting the authors"
+    "Permission:Authors.Delete": "Deleting the authors",
+    "Menu:Authors": "Authors",
+    "Authors": "Authors",
+    "AuthorDeletionConfirmationMessage": "Are you sure to delete the author '{0}'?",
+    "BirthDate": "Birth date",
+    "NewAuthor": "New author"
 
   }
 }

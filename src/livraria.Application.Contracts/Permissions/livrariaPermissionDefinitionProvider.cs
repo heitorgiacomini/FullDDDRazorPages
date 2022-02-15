@@ -9,7 +9,7 @@ public class livrariaPermissionDefinitionProvider : PermissionDefinitionProvider
     public override void Define(IPermissionDefinitionContext context)
     {
         
-        var livrariaGroup = context.AddGroup(livrariaPermissions.GroupName, L("Permission:Permission:BookStore"));
+        var livrariaGroup = context.AddGroup(livrariaPermissions.GroupName, L("Permission:Permission:livraria"));
 
         var booksPermission = livrariaGroup.AddPermission(livrariaPermissions.Books.Default, L("Permission:Books"));
         booksPermission.AddChild(livrariaPermissions.Books.Create, L("Permission:Books.Create"));

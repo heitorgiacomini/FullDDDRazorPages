@@ -35,19 +35,19 @@ public class livrariaMenuContributor : IMenuContributor
         //    )
         //);
 
-        //var bookStoreMenu = new ApplicationMenuItem(
-        //   "BooksStore",
-        //   l["Menu:BookStore"],
+        //var livrariaMenu = new ApplicationMenuItem(
+        //   "livraria",
+        //   l["Menu:livraria"],
         //   icon: "fa fa-book"
         //);
 
-        //context.Menu.AddItem(bookStoreMenu);
+        //context.Menu.AddItem(livrariaMenu);
 
         ////CHECK the PERMISSION
         //if (await context.IsGrantedAsync(livrariaPermissions.Books.Default))
         //{
-        //    bookStoreMenu.AddItem(new ApplicationMenuItem(
-        //        "BooksStore.Books",
+        //    livrariaMenu.AddItem(new ApplicationMenuItem(
+        //        "livraria.Books",
         //        l["Menu:Books"],
         //        url: "/Books"
         //    ));
@@ -77,23 +77,31 @@ public class livrariaMenuContributor : IMenuContributor
 
         var l = context.GetLocalizer<livrariaResource>();
 
-        context.Menu.Items.Insert(0, new ApplicationMenuItem("BookStore.Home", l["Menu:Home"], "~/"));
+        context.Menu.Items.Insert(0, new ApplicationMenuItem("livraria.Home", l["Menu:Home"], "~/"));
 
-        var bookStoreMenu = new ApplicationMenuItem(
-            "BooksStore",
-            l["Menu:BookStore"],
+        var livrariaMenu = new ApplicationMenuItem(
+            "livraria",
+            l["Menu:livraria"],
             icon: "fa fa-book"
         );
 
-        context.Menu.AddItem(bookStoreMenu);
+        context.Menu.AddItem(livrariaMenu);
 
         //CHECK the PERMISSION
         if (await context.IsGrantedAsync(livrariaPermissions.Books.Default))
         {
-            bookStoreMenu.AddItem(new ApplicationMenuItem(
-                "BooksStore.Books",
+            livrariaMenu.AddItem(new ApplicationMenuItem(
+                "livraria.Books",
                 l["Menu:Books"],
                 url: "/Books"
+            ));
+        }
+
+        if (await context.IsGrantedAsync(livrariaPermissions.Authors.Default)) {
+            livrariaMenu.AddItem(new ApplicationMenuItem(
+                "livraria.Authors",
+                l["Menu:Authors"],
+                url:"/Authors"
             ));
         }
     }

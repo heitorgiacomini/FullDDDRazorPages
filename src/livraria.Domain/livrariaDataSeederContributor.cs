@@ -8,15 +8,15 @@ using Volo.Abp.Domain.Repositories;
 
 namespace livraria
 {
-    //public class BookStoreDataSeederContributor
-    public class BookStoreDataSeederContributor
+    //public class livrariaDataSeederContributor
+    public class livrariaDataSeederContributor
         : IDataSeedContributor, ITransientDependency
     {
         private readonly IRepository<Book, Guid> _bookRepository;
         private readonly IAuthorRepository _authorRepository;
         private readonly AuthorManager _authorManager;
 
-        public BookStoreDataSeederContributor(IRepository<Book, Guid> bookRepository,
+        public livrariaDataSeederContributor(IRepository<Book, Guid> bookRepository,
             IAuthorRepository authorRepository,
             AuthorManager authorManager)
         {

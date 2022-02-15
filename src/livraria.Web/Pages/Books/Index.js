@@ -17,14 +17,14 @@
                             [
                                 {
                                     text: localization('Edit'),
-                                    visible: abp.auth.isGranted('BookStore.Books.Edit'), //CHECK for the PERMISSION
+                                    visible: abp.auth.isGranted('livraria.Books.Edit'), //CHECK for the PERMISSION
                                     action: function (data) {
                                         editModal.open({ id: data.record.id });
                                     }
                                 },
                                 {
                                     text: localization('Delete'),
-                                    visible: abp.auth.isGranted('BookStore.Books.Delete'), //CHECK for the PERMISSION
+                                    visible: abp.auth.isGranted('livraria.Books.Delete'), //CHECK for the PERMISSION
                                     confirmMessage: function (data) {
                                         return localization(
                                             'BookDeletionConfirmationMessage',
