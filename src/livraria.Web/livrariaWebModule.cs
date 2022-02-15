@@ -95,6 +95,11 @@ public class livrariaWebModule : AbpModule
             options.Conventions.AuthorizePage("/Books/EditModal", livrariaPermissions.Books.Edit);
         });
 
+        //Configure<RazorPagesOptions>(options =>
+        //{
+        //    options.Conventions.AuthorizePage("/Authors/Index", livrariaPermissions.Books.Default); 
+        //});
+       
     }
 
     private void ConfigureUrls(IConfiguration configuration)

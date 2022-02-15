@@ -28,12 +28,13 @@ public class livrariaHttpApiModule : AbpModule
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
         ConfigureLocalization();
-        //Configure<RazorPagesOptions>(options =>
-        //{
-        //    options.Conventions.AuthorizePage("/Authors/Index", livrariaPermissions.Authors.Default);
-        //    options.Conventions.AuthorizePage("/Authors/CreateModal", livrariaPermissions.Authors.Create);
-        //    options.Conventions.AuthorizePage("/Authors/EditModal", livrariaPermissions.Authors.Edit);
-        //});
+        Configure<RazorPagesOptions>(options =>
+        {
+            options.Conventions.AuthorizePage("/Authors/Index", livrariaPermissions.Authors.Default);
+            options.Conventions.AuthorizePage("/Authors/CreateModal", livrariaPermissions.Authors.Create);
+            options.Conventions.AuthorizePage("/Authors/EditModal", livrariaPermissions.Authors.Edit);
+        });
+
         //Configure<RazorPagesOptions>(options =>
         //{
         //    options.Conventions.AuthorizePage("/Books/Index", livrariaPermissions.Authors.Default);
