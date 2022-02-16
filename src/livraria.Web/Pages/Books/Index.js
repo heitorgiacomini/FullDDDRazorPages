@@ -50,6 +50,10 @@
                     data: "name"
                 },
                 {
+                    title: localization('Author'),
+                    data: 'authorName'
+                },
+                {
                     title: localization('Type'),
                     data: "type",
                     render: function (data) {
